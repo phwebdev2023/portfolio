@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint 'src/**/*.{js,jsx}' --cache --quiet",
+    "lint:fix": "npm run lint -- --fix",
+    "format": "prettier 'src/**/*.{js,jsx}' --write"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -16,6 +19,13 @@
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@vitejs/plugin-react": "^3.1.0",
+    "eslint": "^8.35.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^2.8.4",
     "vite": "^4.1.0"
   }
 }
