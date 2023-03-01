@@ -9,7 +9,23 @@
     "preview": "vite preview",
     "lint": "eslint 'src/**/*.{js,jsx}' --cache --quiet",
     "lint:fix": "npm run lint -- --fix",
-    "format": "prettier 'src/**/*.{js,jsx}' --write"
+    "format": "prettier 'src/**/*.{js,jsx}' --write",
+    "prepare": "node -e \"try { require('husky').install() } catch (e) {if (e.code !== 'MODULE_NOT_FOUND') throw e}\" && husky install && npx husky set .husky/pre-commit 'npx lint-staged'"
+  },
+  "lint-staged": {
+    "*.+(js|jsx|ts|tsx|cjs)": [
+      "eslint --cache --fix",
+      "prettier --write"
+    ],
+    "*.+(css|scss|sass)": [
+      "prettier --write"
+    ],
+    "*.+(html)": [
+      "prettier --write"
+    ],
+    "*.+(md)": [
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -25,6 +41,8 @@
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.2",
     "prettier": "^2.8.4",
     "vite": "^4.1.0"
   }
