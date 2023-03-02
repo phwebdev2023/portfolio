@@ -1,4 +1,9 @@
-.black-bold-font {
+.bold-font-color {
   color: black;
   font-weight: 900;
+}
+
+.border-style {
+  border-color: whitesmoke;
+  border-width: 0.3cm;
 }
