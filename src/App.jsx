@@ -8,15 +8,15 @@ import Footer from './components/Shared/Footer';
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
       <div className="flex h-screen flex-col">
-        <div className="flex-grow">
+        <Navbar />
+        <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             {/* Add Projects, Resume Components*/}
           </Routes>
-        </div>
+        </main>
         <Footer />
       </div>
     </BrowserRouter>

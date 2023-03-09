@@ -1,30 +1,22 @@
+import logo from '../../assets/logo.png';
+import NavbarLink from './NavbarLink';
+
 const Navbar = () => {
   return (
-    <nav className="bg-indigo-900 py-6 text-center text-purple-200">
-      <ul className="flex justify-between">
-        <li>
-          <a href="/">BrandLogo</a>
-        </li>
-        <li>
-          <a href="/">Home</a>
-        </li>
-        <li>
-          <a href="/about">About</a>
-        </li>
-        <li>
-          <a href="/projects">Projects</a>
-        </li>
-        <li>
-          <a href="/resume">Resume</a>
-        </li>
-        <li>
-          <a href="/blog">Blog</a>
-        </li>
-        <li>
-          <a href="/gh-repo">GithubRepo</a>
-        </li>
-      </ul>
-    </nav>
+    <div className="">
+      <nav className="flex items-center justify-between bg-indigo-900 py-1 font-bold text-purple-200">
+        <a href="/">
+          <img src={logo} alt="Logo" className="h-20 w-40" />
+        </a>
+        <ul className="flex h-6 space-x-8">
+          <NavbarLink name="Home" url="/" />
+          <NavbarLink name="About" url="/about" />
+          <NavbarLink name="Projects" url="/projects" />
+          <NavbarLink name="Resume" url="/resume" />
+          <NavbarLink name="Github Repo" url="/github-repo" />
+        </ul>
+      </nav>
+    </div>
   );
 };
 
