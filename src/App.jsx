@@ -4,6 +4,7 @@ import Navbar from './components/Shared/Navbar';
 import Home from './components/Home/Home';
 import About from './components/About/About';
 import Footer from './components/Shared/Footer';
+import Projects from './components/Projects/Projects';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/projects" element={<Projects />} />
             {/* Add Projects, Resume Components*/}
           </Routes>
         </main>
